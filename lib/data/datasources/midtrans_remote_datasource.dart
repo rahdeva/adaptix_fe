@@ -5,9 +5,8 @@ import 'package:http/http.dart' as http;
 
 import 'package:adaptix_fe/data/models/response/qris_response_model.dart';
 
-String serverKey = 'Mid-server-CvNx9YqsIJiuIOZeC383IPnA';
-
 class MidtransRemoteDatasource {
+  String serverKey = 'Mid-server-CvNx9YqsIJiuIOZeC383IPnA';
   String generateBasicAuthHeader(String serverKey) {
     final base64Credentials = base64Encode(utf8.encode('$serverKey:'));
     final authHeader = 'Basic $base64Credentials';
